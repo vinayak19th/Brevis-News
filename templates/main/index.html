@@ -5,12 +5,7 @@
 	<head>
 		<title>Brevis News</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="{% static 'CSS/main.css' %}">
-		<style>
-		body, html {
-		    height: 100%;
-		}
-		</style>
+		<link rel="stylesheet" href="{% static 'CSS/main.css' %}" type="text/css">  
 	</head>
 
 	<body class="is-preload">
@@ -21,6 +16,7 @@
 			<br><br>
 		</div>
 
+		<h1>Trending Terms on the Web</h1>
 		{% for term in trending_terms %}
 		<li><a href='https://www.google.co.in/search?q={{ term|to_plus }}'>{{term}}</a></li>
 		{% endfor %}
